@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root{
+    --bgColor1: #EAEFEF;
+    --bgColor2: #E9E8E8;
+}
+
+.navBarContainer {    
+    border-radius: 20px;    
+    background-color: var(--bgColor1); 
+    transition: 0.3s ease-in-out;    
+    
+    /*EAEFEF F9F8F6 E9E8E8*/
+
+    /* background: linear-gradient(10deg, #E9E8E8, #F9F8F6, #EAEFEF); */
+    /* box-shadow: 1px 2px 20px black; */
+    /* border: 2px solid rgb(163, 163, 4); */
+}
+.navBarContainer:hover{
+    /* background-color: var(--bgColor2);  */
+    background-color: white;
+    cursor: url("/src/assets/cursor3.png") 16 16, auto;
+}
+
+.headerBox{
+    background-color: var(--bgColor1);
+}
+.headerBox:hover{
+    background-color: var(--bgColor2); 
+    cursor: url("/src/assets/cursor3.png") 16 16, auto;
+}
+
+.iconHandler{
+    transition: 0.1s ease-in-out;
+}
+.iconImg2{
+    display: none;
+}
+
+.iconHandler:hover .iconImg2{
+    display: block;
+}
+
+.iconHandler:hover .iconImg1{
+    display: none;
+}

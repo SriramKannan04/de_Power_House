@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *{
+  margin: 0;
+  box-sizing: border-box;
+} */
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+
+  cursor: url("/src/assets/cursor2.png") 16 16, auto;
+
+}
+
