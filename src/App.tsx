@@ -14,7 +14,6 @@ import GroceriesComponent from './components/groceriesComp';
 import DishComponent from './components/dishComp';
 
 import GroceriesIcon from './assets/iconGroc.png';
-import GroceriesIcon2 from './assets/iconGroc2.png';
 import DishIcon from './assets/iconDish.png';
 import HomeIcon from './assets/iconHome.png';
 
@@ -27,6 +26,7 @@ function App() {
   return (
     <main className='bg-gradient-to-r from-slate-50 to-slate-300 h-screen w-screen'>
       <div className='flex flex-row justify-center items-center gap-3 h-full w-full'>
+        
         <Box className="flex h-7/8 w-1/10 p-5" sx={{display:{xl:"flex", lg:"flex", md:"none", sm:"none", xs:"none"}}}>
           <nav className='navBarContainer w-full h-full flex flex-col gap-15 items-center justify-center'>
             <Link to={'/home'} >
@@ -59,12 +59,12 @@ function App() {
           </nav>
         </Box>
 
-        <Box className="w-full h-full flex flex-col gap-5">
-          <Box className='headerBox w-full h-1/10' sx={{display:{xl:"none", lg:"none", md:"flex", sm:"flex", xs:"flex"}}}>
+        <Box className="w-full h-full flex flex-col gap-5" sx={{overflow:"hidden"}}>
+          <Box className='headerBox w-full h-1/10' sx={{ position:"sticky", top:0, display:{xl:"none", lg:"none", md:"flex", sm:"flex", xs:"flex"}}}>
 
           </Box>
            
-          <Box className='contentBox w-full h-full' sx={{border:"2px solid blue"}}>
+          <Box className='contentBox w-full h-full p-2' sx={{overflow:"auto"}}>
         
             {/* <BrowserRouter> */}
               <Routes>
