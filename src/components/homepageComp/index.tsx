@@ -30,7 +30,7 @@ const HomePageComponent = () => {
 
       <div className='w-full h-full' >
         <p className='text-wrap text-justify italic font-semibold indent-10 text-md lg:text-xl xl:text-xl'>
-          Dear 🐛🔥's if you have any suggestion, kindly ping me don't bite me d!ck
+          My dear honourable 🐛🔥's if you have any suggestion, kindly ping me don't bite me d!ck
         </p>
       </div>
     </Box>
