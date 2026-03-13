@@ -110,7 +110,7 @@ const HomePageComponent = () => {
       </Box>
 
       <div className='w-full p-5 flex justify-center items-center'>
-        <p className='text-wrap text-center italic font-semibold text-md'>My dear honourable 🐛🔥's if you have any suggestion, kindly ping me don't bite me d!ck</p>
+        <p className='text-wrap text-center italic font-semibold text-md'>My dear honourable 🐛🔥's if you have any suggestion, kindly ping me don't bite my d!ck</p>
       </div>
     </div>
   )
