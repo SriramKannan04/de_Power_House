@@ -17,9 +17,13 @@ import GroceriesIcon from './assets/iconGroc.png';
 import DishIcon from './assets/iconDish.png';
 import HomeIcon from './assets/iconHome.png';
 
-import FoodGif from './assets/gifBurger.gif';
-import HomeGif from './assets/gifHome.gif';
-import GroceriesGif from './assets/gifGroceries.gif';
+import GroceriesIconDark from './assets/iconGroc2.png';
+import DishIconDark from './assets/iconDish2.png';
+import HomeIconDark from './assets/iconHome2.png';
+
+import FoodGif from './assets/gifBurger2.gif';
+import HomeGif from './assets/gifHome2.gif';
+import GroceriesGif from './assets/gifGroceries2.gif';
 
 function App() {
 
@@ -31,13 +35,14 @@ function App() {
 
       <div className='flex flex-row justify-center items-center gap-3 h-full w-full'>
         
-        <Box className="flex h-7/8 w-1/10 p-5" sx={{display:{xl:"flex", lg:"flex", md:"none", sm:"none", xs:"none"}}}>
+        <Box className="flex h-7/8 w-1/13 p-3" sx={{display:{xl:"flex", lg:"flex", md:"none", sm:"none", xs:"none"}}}>
           <nav className='navBarContainer w-full h-full flex flex-col gap-15 items-center justify-center'>
             <Link to={'/home'} >
               <Tooltip title="Home" placement="top">
                 <aside className='iconHandler'>
-                  <img src={HomeIcon} width={35} className='iconImg1'/>
-                  <img src={HomeGif} width={50} className='iconImg2'/>
+                  <img src={HomeIconDark} width={35} className='iconImg1'/>
+                  {/* <img src={HomeIconDark} width={35} className='iconImg3'/> */}
+                  <img src={HomeGif} width={50} className='iconImg2'/>                  
                 </aside>
               </Tooltip>
             </Link>
@@ -45,7 +50,8 @@ function App() {
             <Link to={'/groceries'} >
               <Tooltip title="Groceries" placement="top">
                 <aside className='iconHandler'>
-                  <img src={GroceriesIcon} width={35} className='iconImg1'/>
+                  <img src={GroceriesIconDark} width={35} className='iconImg1'/>                     
+                  {/* <img src={GroceriesIconDark} width={35} className='iconImg3'/>                */}
                   <img src={GroceriesGif} width={50} className='iconImg2'/>
                 </aside>
               </Tooltip>
@@ -54,8 +60,9 @@ function App() {
             <Link to={'/dish'} >
               <Tooltip title="Dish" placement="top">
                 <aside className='iconHandler'>
-                  <img src={DishIcon} width={35} className='iconImg1'/>
-                  <img src={FoodGif} width={50} className='iconImg2'/>
+                  <img src={DishIconDark} width={35} className='iconImg1'/>
+                  {/* <img src={DishIconDark} width={35} className='iconImg3'/> */}
+                  <img src={FoodGif} width={50} className='iconImg2'/>                  
                 </aside>
               </Tooltip>
             </Link>                   
@@ -95,6 +102,8 @@ function App() {
 
         </Box>
       </div> 
+
+      
 
       {/* <footer className="w-full h-10"></footer>      */}
     </main>
