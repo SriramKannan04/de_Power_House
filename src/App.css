@@ -70,12 +70,12 @@
 
     caret-color: transparent; 
 }
-/* .headerBox:hover{
-    cursor: url("/src/assets/cursor3.png") 16 16, auto;
-} */
 
 .iconHandler{
     transition: 0.1s ease-in-out;
+}
+.iconImg1{
+    filter: drop-shadow(2px 2px 5px #A53860);
 }
 .iconImg2{
     display: none;
@@ -129,16 +129,6 @@
     border-radius: 20px;
 
     box-shadow: 2px 2px 30px black;
-}
-
-footer{
-    border: 2px solid black;
-    background-color: black;
-    position:absolute;
-    bottom: 0;
-    z-index: 1;
-
-    /* width: 100% !important; */
 }
 
 

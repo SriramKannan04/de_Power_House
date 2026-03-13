@@ -57,8 +57,8 @@ function App() {
               </Tooltip>
             </Link>
 
-            <Link to={'/dish'} >
-              <Tooltip title="Dish" placement="top">
+            <Link to={'/food'} >
+              <Tooltip title="Food Menu" placement="top">
                 <aside className='iconHandler'>
                   <img src={DishIconDark} width={35} className='iconImg1'/>
                   {/* <img src={DishIconDark} width={35} className='iconImg3'/> */}
@@ -82,7 +82,7 @@ function App() {
                 <h1 className='text-md text-white font-semibold'>Groceries</h1>
               </Link>
               
-              <Link to={'/dish'} > 
+              <Link to={'/food'} > 
                 <h1 className='text-md text-white font-semibold'>Dish</h1>
               </Link>                        
           </Box>
@@ -94,7 +94,7 @@ function App() {
                 <Route path='/' element={<Navigate to="/home" />} />
                 <Route path='/home' element={<HomePageComponent />} />
                 <Route path='/groceries' element={<GroceriesComponent />} />
-                <Route path='/dish' element={<DishComponent />} />
+                <Route path='/food' element={<DishComponent />} />
               </Routes>
             {/* </BrowserRouter> */}
 
@@ -102,10 +102,6 @@ function App() {
 
         </Box>
       </div> 
-
-      
-
-      {/* <footer className="w-full h-10"></footer>      */}
     </main>
   );
 }

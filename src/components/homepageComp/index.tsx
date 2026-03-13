@@ -63,12 +63,11 @@ const HomePageComponent = () => {
           <iframe
             width="100%"
             height="300"
-            style={{ border: 0 }}
             loading="lazy"
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
-            //src="https://maps.google.com/maps?q=De%20Power%20House%20Chennai&z=17&output=embed"
             src={`https://maps.google.com/maps?q=13.060979176925432,80.20280032225126&hl=es;z=14&output=embed`}
+            style={{borderBottomRightRadius:25}}
           ></iframe>
         </aside> 
 
