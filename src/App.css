@@ -108,10 +108,18 @@
 
 /*Home Page*/
 
-.appTitle{
+/* .appTitle{
    background: linear-gradient(190deg, #0D1A63, #2845D6);
    background-clip: text;
-   color: transparent;
+   -webkit-background-clip: text;  
+   -webkit-text-fill-color: transparent;   
+} */
+
+.split-char {
+  background: linear-gradient(190deg, #0D1A63, #2845D6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .locationBox{
