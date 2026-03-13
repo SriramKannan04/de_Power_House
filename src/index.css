@@ -1,6 +1,7 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+@import "tailwindcss";
 
 /* *{
   margin: 0;
@@ -21,6 +22,24 @@ body {
   min-height: 100vh;
 
   cursor: url("/src/assets/cursor2.png") 16 16, auto;
-
 }
 
+
+
+/*
+npm install animate.css --save
+
+import 'animate.css';
+
+animate__zoomIn
+animate__heartBeat -- working
+animate__bounceIn  -- working
+animate__bounce
+animate__jello
+animate__fadeInDown
+*/
+
+/*
+
+
+*/

@@ -1,39 +1,86 @@
 @import "tailwindcss";
 
 :root{
-    --bgColor1: #EAEFEF;
+    --bgColor1: #EAEFEF; 
     --bgColor2: #E9E8E8;
+    --linerGradient1: linear-gradient(90deg, #511D43, #A53860);
+    --linearGradient2: linear-gradient(90deg, white, white);
+    /*EAEFEF F9F8F6 E9E8E8 433D8B*/
+}
+
+
+.bgHandler {
+    background-image: url('/src/assets/bg-2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topImage {
+    /* border: 2px solid black; */
+    width: 500px;
+    height: 350px;
+
+    position: absolute;
+    top: 0;
+
+    background-image: url('/src/assets/topImage-noBG.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bottomImage {
+    /* border: 2px solid purple; */
+    width: 600px;
+    height: 400px;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url('/src/assets/bottomImage-noBG.png');
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .navBarContainer {    
     border-radius: 20px;    
     background-color: var(--bgColor1); 
-    transition: 0.3s ease-in-out;    
-    
-    /*EAEFEF F9F8F6 E9E8E8*/
+    transition: 0.3s ease-in-out;   
+    caret-color: transparent; 
 
-    /* background: linear-gradient(10deg, #E9E8E8, #F9F8F6, #EAEFEF); */
-    /* box-shadow: 1px 2px 20px black; */
-    /* border: 2px solid rgb(163, 163, 4); */
+    z-index: 1;
+    
+    box-shadow: 1px 1px 1px 1px snow;
+
+    /* background: var(--linerGradient1); */
 }
 .navBarContainer:hover{
-    /* background-color: var(--bgColor2);  */
     background-color: white;
-    /* cursor: url("/src/assets/cursor1.png") 16 16, auto; */
+    box-shadow: 1px 1px 30px 5px #511D43;
+    /* background: var(--linerGradient2); */
 }
 
 .headerBox{
-    background-color: var(--bgColor1);
-}
-.headerBox:hover{
-    background-color: var(--bgColor2); 
-    cursor: url("/src/assets/cursor3.png") 16 16, auto;
+    background-image: url('/src/assets/headerImg2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    caret-color: transparent; 
 }
 
 .iconHandler{
     transition: 0.1s ease-in-out;
 }
+.iconImg1{
+    filter: drop-shadow(2px 2px 5px #A53860);
+}
 .iconImg2{
+    display: none;
+}
+.iconImg3{
     display: none;
 }
 
@@ -42,11 +89,55 @@
     cursor: url("/src/assets/cursor3.png") 16 16, auto;
 }
 
+.navBarContainer:hover .iconImg3{
+    display: block;
+}
+
 .iconHandler:hover .iconImg1{
     display: none;
 }
 
-.contentBox{
-    scrollbar-width: none;
-    
+.iconHandler:hover .iconImg3{
+    display: none;
 }
+
+.contentBox{
+    scrollbar-width: none;  
+    z-index: 1;  
+}
+
+/*Home Page*/
+
+/* .appTitle{
+   background: linear-gradient(190deg, #0D1A63, #2845D6);
+   background-clip: text;
+   -webkit-background-clip: text;  
+   -webkit-text-fill-color: transparent;   
+} */
+
+.split-char {
+  background: linear-gradient(190deg, #0D1A63, #2845D6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.locationBox{
+    border: 5px solid #5C3E94;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    /* box-shadow: 2px 2px 100px black; */
+}
+
+.locationBox2{
+    border: 2px solid #5C3E94;
+    border-radius: 20px;
+
+    box-shadow: 2px 2px 30px black;
+}
+
+
+
