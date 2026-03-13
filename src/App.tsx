@@ -25,6 +25,10 @@ function App() {
 
   return (
     <main className='bg-gradient-to-r from-slate-50 to-slate-300 h-screen w-screen'>
+
+      <Box className='topImage' sx={{display:{xl:"block", lg:"block", md:"none", sm:"none", xs:"none"}}}></Box>
+      <Box className='bottomImage' sx={{display:{xl:"block", lg:"block", md:"none", sm:"none", xs:"none"}}}></Box>
+
       <div className='flex flex-row justify-center items-center gap-3 h-full w-full'>
         
         <Box className="flex h-7/8 w-1/10 p-5" sx={{display:{xl:"flex", lg:"flex", md:"none", sm:"none", xs:"none"}}}>
@@ -59,12 +63,24 @@ function App() {
           </nav>
         </Box>
 
-        <Box className="w-full h-full flex flex-col gap-5" sx={{overflow:"hidden"}}>
-          <Box className='headerBox w-full h-1/10' sx={{ position:"sticky", top:0, display:{xl:"none", lg:"none", md:"flex", sm:"flex", xs:"flex"}}}>
+        <Box className="w-full h-full flex flex-col" sx={{overflow:"hidden"}}>
+          <Box className='headerBox w-full h-1/10 flex flex-row justify-center items-center gap-5' 
+            sx={{ position:"sticky", top:0, display:{xl:"none", lg:"none", md:"flex", sm:"flex", xs:"flex"}}}
+            >
+              <Link to={'/home'} > 
+                <h1 className='text-md text-white font-semibold'>Home</h1>
+              </Link>
 
+              <Link to={'/groceries'} >  
+                <h1 className='text-md text-white font-semibold'>Groceries</h1>
+              </Link>
+              
+              <Link to={'/dish'} > 
+                <h1 className='text-md text-white font-semibold'>Dish</h1>
+              </Link>                        
           </Box>
            
-          <Box className='contentBox w-full h-full p-2' sx={{overflow:"auto"}}>
+          <Box className='contentBox w-full h-full' sx={{overflow:"auto"}}>
         
             {/* <BrowserRouter> */}
               <Routes>
@@ -76,10 +92,12 @@ function App() {
             {/* </BrowserRouter> */}
 
           </Box>
-        </Box>
-      </div>      
-    </main>
 
+        </Box>
+      </div> 
+
+      {/* <footer className="w-full h-10"></footer>      */}
+    </main>
   );
 }
 
