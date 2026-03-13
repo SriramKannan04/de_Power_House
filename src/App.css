@@ -18,7 +18,7 @@
 
 .topImage {
     /* border: 2px solid black; */
-    width: 500px;
+    width: 420px;
     height: 350px;
 
     position: absolute;
@@ -44,23 +44,25 @@
     background-size: cover;
 }
 
-.navBarContainer {    
-    border-radius: 20px;    
-    background-color: var(--bgColor1); 
+.navBarContainer {        
     transition: 0.3s ease-in-out;   
     caret-color: transparent; 
 
     z-index: 1;
     
-    box-shadow: 1px 1px 1px 1px snow;
+    /* border-radius: 20px;    
+    background-color: var(--bgColor1);  */
+
+    /* box-shadow: 1px 1px 1px 1px snow; */
 
     /* background: var(--linerGradient1); */
-}
-.navBarContainer:hover{
-    background-color: white;
-    box-shadow: 1px 1px 30px 5px #511D43;
     /* background: var(--linerGradient2); */
 }
+
+/* .navBarContainer:hover{
+    background-color: white;
+    box-shadow: 1px 1px 30px 5px #511D43;    
+} */
 
 .headerBox{
     background-image: url('/src/assets/headerImg2.png');
@@ -108,12 +110,12 @@
 
 /*Home Page*/
 
-/* .appTitle{
+.appTitle{
    background: linear-gradient(190deg, #0D1A63, #2845D6);
    background-clip: text;
-   -webkit-background-clip: text;  
-   -webkit-text-fill-color: transparent;   
-} */
+   background-clip: text;  
+   color: transparent;   
+}
 
 .split-char {
   background: linear-gradient(190deg, #0D1A63, #2845D6);
@@ -141,3 +143,17 @@
 
 
 
+/* Groceries and Food*/
+.arrowHandler {
+    transition: 0.3s ease-in-out;
+    /* border-radius: 50%;
+    border: 1px solid transparent; */
+}
+.arrowHandler:hover{
+    display: block;
+    cursor: url("/src/assets/cursor3.png") 16 16, auto;
+
+    /* border: 1px solid #E9E8E8;
+    background-color: #E9E8E8;
+    border-radius: 50%; */
+}
