@@ -59,15 +59,15 @@ const HomePageComponent = () => {
           />
 
           <section className='p-3 flex flex-col justify-center items-center gap-3'>
-            <p className='text-wrap indent-5 text-justify italic font-semibold text-md'>
+            <p className='text-wrap indent-5 text-left italic font-semibold text-md'>
               We roll as five, but we move as one. Three Chartered Accountants who balance numbers with precision,
               one Cost Management Accountant who finds value in every detail, and one techie who codes solutions into reality.
             </p>
-            <p className='text-wrap indent-5 text-justify italic font-semibold text-md'>
+            <p className='text-wrap indent-5 text-left italic font-semibold text-md'>
               As working professionals, we hustle through deadlines, audits, and projects, yet never lose the laughter, the chai breaks,
               or the late‑night talks that keep us grounded.
             </p>
-            <p className='text-wrap indent-5 text-justify italic font-semibold text-md '>
+            <p className='text-wrap indent-5 text-left italic font-semibold text-md '>
               Together we are more than colleagues; we are homies, a squad of growth, hustle, and friendship.
               Five professionals, one promise: homies for life.
             </p>
@@ -120,25 +120,13 @@ const HomePageComponent = () => {
         </aside>            
       </Box>
 
-      <Box className="w-full h-full p-3 gap-3 justify-center lg:justify-start items-center lg:items-start flex-col lg:flex-row" sx={{display:{xl:"none", lg:"none", md:"flex", sm:"flex", xs:"flex"}}}>       
+      <Box className="w-full p-3 gap-3 justify-center lg:justify-start items-center lg:items-start flex-col lg:flex-row" sx={{display:{xl:"none", lg:"none", md:"flex", sm:"flex", xs:"flex"}}}>       
 
-        <aside className="w-full h-full flex flex-col justify-center items-center gap-3 p-3 locationBox2">
+        <aside className="w-full flex flex-col justify-center items-center gap-3 p-3 locationBox2">
           <aside className='flex flex-row gap-2 justify-center items-center'>
             <img src={Location} alt="Location" width={20} />
-            {/* <h1 className='text-xl font-extrabold lg:text-2xl xl:text-2xl appTitle'>Homie's Location</h1> */}
-            <SplitText
-            text="Homie's Location"
-            className="text-xl font-extrabold lg:text-2xl xl:text-2xl"
-            delay={50}
-            duration={1.25}
-            ease="power3.out"
-            splitType="chars"
-            from={{ opacity: 0, y: 40 }}
-            to={{ opacity: 1, y: 0 }}
-            threshold={0.1}
-            rootMargin="-100px"
-            textAlign="center"
-          />
+            <h1 className='text-xl font-extrabold lg:text-2xl xl:text-2xl appTitle'>Homie's Location</h1>
+            
           </aside>
           
           <iframe
