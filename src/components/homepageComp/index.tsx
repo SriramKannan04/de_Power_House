@@ -7,10 +7,16 @@ import {
   IconButton, Radio, Tooltip
 } from "@mui/material";
 
+import SplitText from "../../utilis/SplitText";
+
 import Homies from "../../assets/homeLogo2.png";
 import Location from "../../assets/iconLocation.png";
 
 const HomePageComponent = () => {
+
+  // const handleAnimationComplete = () => {
+  //   console.log('All letters have animated!');
+  // };
 
   const address = [
     {line:"10/7 Ruk Nivas,"},
@@ -26,17 +32,31 @@ const HomePageComponent = () => {
 
       <div className='w-full h-full flex lg:flex-row flex-col justify-center items-center gap-3'>
         <aside className="w-full lg:w-2/3 h-full flex justify-center lg:justify-start items-center lg:items-center">
-          <Box sx={{ display: { xl: "block", lg: "block", md: "block", sm: "none", xs: "none" } }}>
-            <img src={Homies} alt="Homies" width={500} />
+          <Box className='' sx={{ display: { xl: "block", lg: "block", md: "block", sm: "none", xs: "none" } }}>
+            <img src={Homies} alt="Homies" width={500}/>
           </Box>
 
-          <Box sx={{ display: { xl: "none", lg: "none", md: "none", sm: "block", xs: "block" } }}>
+          <Box className='' sx={{ display: { xl: "none", lg: "none", md: "none", sm: "block", xs: "block" } }}>
             <img src={Homies} alt="Homies" width={300} />
           </Box>
         </aside>
 
         <aside className="w-full h-full flex gap-3 justify-center lg:justify-start items-center lg:items-start flex-col">
-          <h1 className='text-3xl font-extrabold lg:text-5xl xl:text-5xl appTitle'>de Power House</h1>
+          {/* <h1 className='text-3xl font-extrabold lg:text-5xl xl:text-5xl appTitle'>de Power House</h1> */}
+          <SplitText
+            text="de Power House"
+            className="text-3xl font-extrabold lg:text-5xl xl:text-5xl "
+            delay={50}
+            duration={1.25}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+            // onLetterAnimationComplete={handleAnimationComplete}            
+          />
 
           <section className='p-3 flex flex-col justify-center items-center gap-3'>
             <p className='text-wrap indent-5 text-justify italic font-semibold text-md'>
@@ -59,16 +79,30 @@ const HomePageComponent = () => {
       <Box className="w-full h-full gap-3 justify-center lg:justify-start items-center lg:items-start flex-col lg:flex-row" sx={{display:{xl:"flex", lg:"flex", md:"none", sm:"none", xs:"none"}}}>       
 
         <aside className="w-2/3 h-full flex flex-col gap-3 p-3 locationBox">
-          <h1 className='text-xl font-extrabold lg:text-2xl xl:text-2xl appTitle'>Homie's Location</h1>
+          {/* <h1 className='text-xl font-extrabold lg:text-2xl xl:text-2xl appTitle'>Homie's Location</h1> */}
+
+          <SplitText
+            text="Homie's Location"
+            className="text-xl font-extrabold lg:text-2xl xl:text-2xl"
+            delay={50}
+            duration={1.25}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="left"
+          />
+
           <iframe
             width="100%"
             height="300"
-            style={{ border: 0 }}
             loading="lazy"
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
-            //src="https://maps.google.com/maps?q=De%20Power%20House%20Chennai&z=17&output=embed"
             src={`https://maps.google.com/maps?q=13.060979176925432,80.20280032225126&hl=es;z=14&output=embed`}
+            style={{borderBottomRightRadius:25}}
           ></iframe>
         </aside> 
 
@@ -91,7 +125,20 @@ const HomePageComponent = () => {
         <aside className="w-full h-full flex flex-col justify-center items-center gap-3 p-3 locationBox2">
           <aside className='flex flex-row gap-2 justify-center items-center'>
             <img src={Location} alt="Location" width={20} />
-            <h1 className='text-xl font-extrabold lg:text-2xl xl:text-2xl appTitle'>Homie's Location</h1>
+            {/* <h1 className='text-xl font-extrabold lg:text-2xl xl:text-2xl appTitle'>Homie's Location</h1> */}
+            <SplitText
+            text="Homie's Location"
+            className="text-xl font-extrabold lg:text-2xl xl:text-2xl"
+            delay={50}
+            duration={1.25}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+          />
           </aside>
           
           <iframe
@@ -110,10 +157,11 @@ const HomePageComponent = () => {
       </Box>
 
       <div className='w-full p-5 flex justify-center items-center'>
-        <p className='text-wrap text-center italic font-semibold text-md'>My dear honourable 🐛🔥's if you have any suggestion, kindly ping me don't bite me d!ck</p>
+        <p className='text-wrap text-center italic font-semibold text-md'>My dear honourable 🐛🔥's if you have any suggestion, kindly ping me don't bite my d!ck</p>
       </div>
     </div>
   )
 }
 
 export default HomePageComponent
+

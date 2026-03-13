@@ -23,3 +23,23 @@ body {
 
   cursor: url("/src/assets/cursor2.png") 16 16, auto;
 }
+
+
+
+/*
+npm install animate.css --save
+
+import 'animate.css';
+
+animate__zoomIn
+animate__heartBeat -- working
+animate__bounceIn  -- working
+animate__bounce
+animate__jello
+animate__fadeInDown
+*/
+
+/*
+
+
+*/
