@@ -1,6 +1,7 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+@import "tailwindcss";
 
 /* *{
   margin: 0;
@@ -21,6 +22,4 @@ body {
   min-height: 100vh;
 
   cursor: url("/src/assets/cursor2.png") 16 16, auto;
-
 }
-
