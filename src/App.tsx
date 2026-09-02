@@ -28,7 +28,7 @@ import GroceriesGif from './assets/gifGroceries2.gif';
 function App() {
 
   return (
-    <main className='bg-gradient-to-r from-slate-50 to-slate-300 h-screen w-screen'>
+    <main className='bg-gradient-to-r from-slate-200 to-slate-100 h-screen w-screen'>
 
       <Box className='topImage' sx={{display:{xl:"block", lg:"block", md:"none", sm:"none", xs:"none"}}}></Box>
       <Box className='bottomImage' sx={{display:{xl:"block", lg:"block", md:"none", sm:"none", xs:"none"}}}></Box>

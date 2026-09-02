@@ -4,7 +4,8 @@ import {
   Box, Card, Stack, Modal, Paper, Grid,
   Button, TextField, Typography, MenuItem, Drawer, Autocomplete,
   TableBody, TableCell, TableContainer, TableHead, TableRow, Table,
-  IconButton, Radio, Tooltip
+  IconButton, Radio, Tooltip,
+  Checkbox
 } from "@mui/material";
 
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
@@ -31,8 +32,8 @@ const GroceriesComponent = () => {
         {english:"India Gate Briyani rice", tamil:"பிரியாணி அரிசி", quantity:"1kg", img:imagePath.briyaniRiceImg},
         {english:"Sakthi Turmeric Powder", tamil:"மஞ்சள் தூள்", quantity:"250g", img:imagePath.turmericPowderImg},
         {english:"Tata Salt", tamil:"கல் உப்பு", quantity:"500g", img:imagePath.saltImg},        
-        {english:"", tamil:"", quantity:"", img:""},
-        {english:"", tamil:"", quantity:"", img:""},
+        // {english:"", tamil:"", quantity:"", img:""},
+        // {english:"", tamil:"", quantity:"", img:""},
       ]
     },
     {
@@ -90,20 +91,33 @@ const GroceriesComponent = () => {
             </aside>
 
             {explode === list.id && (
-              <aside className='w-full p-3 flex flex-col gap-5'>
-                {list.items.map((subData, index) => (
-                  <aside className='w-full flex flex-col lg:flex-row gap-3 justify-start items-start lg:items-center' key={index}>
-                    <img src={subData.img}  width={80} style={{borderRadius:10}} />
-
-                    <aside className='w-full flex flex-row gap-3 justify-start items-center'>
-                      <p className='text-sm xl:text-base font-semibold text-wrap'>{subData.english}</p>
-                      <p className='text-sm xl:text-base font-semibold text-wrap'>{subData.tamil}</p>
-                      <p className='text-sm xl:text-base font-semibold text-wrap'>{subData.quantity}</p>
-                    </aside>
-                    
-                  </aside>
-                ))}
-              </aside>              
+              <Box className='w-full p-3 flex flex-col gap-5' sx={{display:{xl:'flex', lg:'flex', md:'none', sm:'none', xs:'none'}}}>
+                <TableContainer  component={Paper} elevation={0} className="subTableBox">
+                  <Table>
+                    <TableHead className='headerRow'> 
+                      <TableRow>
+                        <TableCell className='subheaderCell'><Checkbox /></TableCell>
+                        <TableCell className='subheaderCell'></TableCell>
+                        <TableCell className='subheaderCell'>English</TableCell>
+                        <TableCell className='subheaderCell'>Tamil</TableCell>
+                        <TableCell className='subheaderCell'>Quantity</TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      {list.items.map((subData, index) => (
+                        <TableRow key={index}>
+                          <TableCell className='subCell'><Checkbox /></TableCell>
+                          <TableCell className='subCell'><img src={subData.img}  width={80} style={{borderRadius:10}} /></TableCell>
+                          <TableCell className='subCell'>{subData.english}</TableCell>
+                          <TableCell className='subCell'>{subData.tamil}</TableCell>
+                          <TableCell className='subCell'>{subData.quantity}</TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
+                
+              </Box>              
             )}            
           </Card>
         ))}        
